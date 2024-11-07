@@ -1,19 +1,20 @@
-def get_user_text
+# frozen_string_literal: true
+
+def user_text
   puts 'Please write your text:'
   gets.chomp
 end
 
-def get_user_shift
+def user_shift
   puts 'Now enter the shift value:'
   gets.chomp.to_i
 end
 
-user_text = get_user_text
-shift_value = get_user_shift
+text_value = user_text
+shift_value = user_shift
 
 def caesar_cipher(text, shift)
-
-  text_array = text.split("")
+  text_array = text.split('')
 
   encoded_array = text_array.map do |character|
     unicode_value = character.ord + shift
@@ -27,5 +28,4 @@ def caesar_cipher(text, shift)
   puts encoded_array.join
 end
 
-caesar_cipher(user_text, shift_value)
-
+caesar_cipher(text_value, shift_value)
