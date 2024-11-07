@@ -23,7 +23,7 @@ def encode_character(character, shift)
 end
 
 def caesar_cipher(text, shift)
-  text_array = text.split('')
+  text_array = text.chars
 
   encoded_array = text_array.map do |character|
     encode_character(character, shift)
