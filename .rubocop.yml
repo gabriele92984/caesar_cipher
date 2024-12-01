@@ -11,7 +11,7 @@
 
 require: rubocop-performance
 
-# This is .rubocop.yml in ~/my-cool-project/
+# This is .rubocop.yml in /home/gabi/repos/caesar_cipher
 
 inherit_from: ~/.rubocop.yml
 
