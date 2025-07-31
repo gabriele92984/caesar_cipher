@@ -15,7 +15,20 @@ end
 
 def user_shift
   puts 'Now enter the shift value:'
-  gets.chomp.to_i
+  input = gets.chomp
+
+  # Keep asking until a valid integer is provided
+  until valid_integer?(input)
+    puts 'Error: Shift must be an integer. Please try again:'
+    input = gets.chomp
+  end
+
+  input.to_i
+end
+
+def valid_integer?(input)
+  # Check if input is a valid integer (positive or negative)
+  input.match?(/^-?\d+$/)
 end
 
 def encode_character(character, shift)
