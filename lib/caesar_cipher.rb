@@ -44,15 +44,14 @@ def encode_character(character, shift)
 end
 
 def caesar_cipher(text, shift)
-  text_array = text.chars
-
-  encoded_array = text_array.map do |character|
-    encode_character(character, shift)
-  end
-
-  puts encoded_array.join
+  text.chars.map { |c| encode_character(c, shift) }.join
 end
 
-text_value = user_text
-shift_value = user_shift
-caesar_cipher(text_value, shift_value)
+def main
+  text_value = user_text
+  shift_value = user_shift
+  puts "Encoded text: #{caesar_cipher(text_value, shift_value)}"
+end
+
+# Only run main if executed directly (not when required by RSpec)
+main if __FILE__ == $0
