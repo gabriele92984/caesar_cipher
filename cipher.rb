@@ -2,7 +2,15 @@
 
 def user_text
   puts 'Please write your text:'
-  gets.chomp
+  input = gets.chomp
+
+  # Keep asking until a non-empty string is provided
+  while input.empty?
+    puts 'Error: Text cannot be empty. Please try again:'
+    input = gets.chomp
+  end
+
+  input
 end
 
 def user_shift
