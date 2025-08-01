@@ -24,16 +24,16 @@ RSpec.describe 'Caesar Cipher' do
 
   # Test main cipher function: caesar_cipher
   describe '#caesar_cipher' do
-    xit 'encodes a full string correctly' do
+    it 'encodes a full string correctly' do
       expect(caesar_cipher('Hello!', 5)).to eq('Mjqqt&')
     end
 
-    xit 'handles shifts that wrap around the ASCII range' do
+    it 'handles shifts that wrap around the ASCII range' do
       expect(caesar_cipher('~~~', 1)).to eq('   ')  # '~' (126) → ' ' (32)
       expect(caesar_cipher('   ', -1)).to eq('~~~') # ' ' (32) → '~' (126)
     end
 
-    xit 'works with empty strings' do
+    it 'works with empty strings' do
       expect(caesar_cipher('', 10)).to eq('')
     end
   end
