@@ -41,14 +41,14 @@ RSpec.describe 'Caesar Cipher' do
   # Test user input validation (stubbing `gets`)
   describe 'User Input Handling' do
     describe '#user_text' do
-      xit 'rejects empty input and reprompts' do
+      it 'rejects empty input and reprompts' do
         allow_any_instance_of(Kernel).to receive(:gets).and_return('', 'Valid Text')
         expect(user_text).to eq('Valid Text')
       end
     end
 
     describe '#user_shift' do
-      xit 'rejects non-integer input and reprompts' do
+      it 'rejects non-integer input and reprompts' do
         allow_any_instance_of(Kernel).to receive(:gets).and_return('abc', '5')
         expect(user_shift).to eq(5)
       end
