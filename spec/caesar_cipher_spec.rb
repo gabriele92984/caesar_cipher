@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/caesar_cipher' # Assumes your code is in `caesar_cipher.rb`
+require_relative '../lib/caesar_cipher'
 
 RSpec.describe 'Caesar Cipher' do
   # Test helper method: encode_character
